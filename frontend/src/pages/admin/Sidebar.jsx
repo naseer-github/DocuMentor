@@ -10,8 +10,8 @@ export default function Sidebar({ activeTab, setActiveTab }) {
     <div className="w-64 bg-gradient-to-b from-gray-900 to-gray-950 border-r border-gray-800 text-white flex flex-col">
       <div className="p-6">
         <h1 className="text-xl font-bold flex items-center text-white">
-          <img src="/logo.png" alt="PocketDoc Logo" className="h-12 mr-5" />
-          PocketDoc Admin
+          <img src="/logo.png" alt="DocuMentor Logo" className="h-12 mr-5" />
+          DocuMentor Admin
         </h1>
       </div>
       <nav className="flex-1 px-4 pb-4">

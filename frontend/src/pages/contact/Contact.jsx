@@ -19,7 +19,7 @@ export default function Contact() {
       <div className="container mx-auto py-16 px-4 mt-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-white">Contact PocketDoc</h1>
+          <h1 className="text-4xl font-bold text-white">Contact DocuMentor</h1>
           <p className="text-gray-400 mt-2 max-w-2xl mx-auto">
             Have questions or feedback? Reach out — we're here to help you learn
             smarter.
@@ -71,12 +71,10 @@ export default function Contact() {
             <div className="space-y-6 text-gray-300">
               <div>
                 <h3 className="text-lg font-medium text-white flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-cyan-400" /> Our Location
+                  <MapPin className="h-5 w-5 text-cyan-400" /> University Of Education, lhr, pakistan
                 </h3>
                 <p className="ml-7">
-                  PUCIT-New Campus F7J8+53W
-                  <br /> Samsani Road, Quaid-i-Azam Campus
-                  <br /> Lahore, Pakistan 123 Innovation Drive
+                  University Of Education, lhr, pakistan
                 </p>
               </div>
               <div>
@@ -84,7 +82,7 @@ export default function Contact() {
                   <Phone className="h-5 w-5 text-cyan-400" /> Phone
                 </h3>
                 <p className="ml-7">
-                  +92 3337403442
+                  +92 315-4407108
                   <br />
                   Mon–Fri: 9am–6pm
                 </p>
@@ -93,7 +91,7 @@ export default function Contact() {
                 <h3 className="text-lg font-medium text-white flex items-center gap-2">
                   <Mail className="h-5 w-5 text-cyan-400" /> Email
                 </h3>
-                <p className="ml-7">support@pocketdoc.ai</p>
+                <p className="ml-7">support@documentor.ai</p>
               </div>
 
               <div>
@@ -123,7 +121,7 @@ export default function Contact() {
         <div className="mb-20">
           <h2 className="text-2xl font-semibold mb-4">Our Location</h2>
           <a
-            href="https://www.google.com/maps/place/PUCIT-New+Campus/@31.4804787,74.2626187,17z/data=!3m1!4b1!4m6!3m5!1s0x391903ccac08143b:0x9b0637753efd261e!8m2!3d31.4804787!4d74.265199!16s%2Fg%2F11cjqdpj0_?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+            href="https://share.google/9qwucFmAM2qPPYHDW"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -143,10 +141,10 @@ export default function Contact() {
           <div className="space-y-4">
             <details className="bg-gray-800/40 p-4 rounded-md">
               <summary className="font-medium text-white cursor-pointer">
-                What file types does PocketDoc support?
+                What file types does DocuMentor support?
               </summary>
               <p className="text-gray-400 mt-2">
-                PocketDoc supports PDFs, DOCX, PPTX, and plain text files. You
+                DocuMentor supports PDFs, DOCX, PPTX, and plain text files. You
                 can also provide URLs for web pages to summarize and quiz.
               </p>
             </details>
@@ -175,10 +173,10 @@ export default function Contact() {
 
             <details className="bg-gray-800/40 p-4 rounded-md">
               <summary className="font-medium text-white cursor-pointer">
-                Is PocketDoc free to use?
+                Is DocuMentor free to use?
               </summary>
               <p className="text-gray-400 mt-2">
-                PocketDoc offers a free tier with core features, and premium
+                DocuMentor offers a free tier with core features, and premium
                 plans for power users and educators with advanced analytics and
                 batch processing.
               </p>

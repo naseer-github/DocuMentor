@@ -29,10 +29,10 @@ export default function ExplainConceptsSection() {
               Understand Concepts
             </h2>
             <p className="text-xl text-gray-300 mb-4">
-              Ask PocketDoc to explain what you don’t understand.
+              Ask DocuMentor to explain what you don’t understand.
             </p>
             <p className="text-gray-400 mb-8">
-              Whether it's a complex paragraph or technical topic, PocketDoc’s
+              Whether it's a complex paragraph or technical topic, DocuMentor’s
               AI can explain it in simple terms — just like a tutor. Learn at
               your pace, with clarity.
             </p>

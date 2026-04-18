@@ -33,9 +33,9 @@ export default function Navbar() {
     <nav className="bg-gray-900 border-b border-gray-800 fixed w-full z-20 top-0 left-0 shadow-lg shadow-black/20">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
         <Link to="/" className="flex items-center space-x-2">
-          <img src="/logo.png" alt="PocketDoc Logo" className="h-8 mr-3" />
+          <img src="/logo.png" alt="DocuMentor Logo" className="h-8 mr-3" />
           <span className="self-center text-xl font-bold whitespace-nowrap text-white">
-            PocketDoc
+            DocuMentor
           </span>
         </Link>
 

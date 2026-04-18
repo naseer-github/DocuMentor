@@ -1,5 +1,5 @@
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,20 +7,65 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies (any depth)
+node_modules/
+**/node_modules/
+
+# Frontend build
+dist/
+dist-ssr/
 *.local
+
+# Environment and secrets
 .env
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
+# Python bytecode and caches
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python tooling / test artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+*.cover
+
+# Packaging
+*.egg
+*.egg-info/
+.eggs/
+build/
+develop-eggs/
+
+# Chroma / local vector database (regenerated per machine)
+AIserver/chroma_dbs/
+**/chroma_dbs/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini

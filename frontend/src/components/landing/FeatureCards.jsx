@@ -22,7 +22,7 @@ export default function FeatureCards() {
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-4 text-white leading-tight">
-            Unlock Smarter Learning with PocketDoc
+            Unlock Smarter Learning with DocuMentor
           </h2>
           <p className="text-lg text-white/90">
             Summarize, quiz, and master your documents with ease — everything

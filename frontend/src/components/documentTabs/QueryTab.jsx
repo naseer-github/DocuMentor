@@ -27,6 +27,7 @@ export default function QueryTab({ document, setDocument }) {
       startPage,
       endPage,
     });
+    if (!response?.answer) return;
     const answer = response.answer;
 
     const cleanedMarkdown = answer

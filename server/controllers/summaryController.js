@@ -44,20 +44,28 @@ exports.generateSummaryFromText = async (req, res) => {
 exports.queryBasedSummary = async (req, res) => {
   const { documentId, query, startPage, endPage } = req.body;
   try {
+    if (!documentId || !query) {
+      return res.status(400).json({
+        status: "error",
+        error: "documentId and query are required",
+      });
+    }
+
     const doc = await documentModel.findById(documentId);
 
     if (!doc) {
-      res.status(404).json({ error: "Document Not Found" });
+      return res.status(404).json({ error: "Document Not Found" });
     }
 
     const form = new FormData();
     form.append("document_id", documentId);
     form.append("query", query);
-    form.append("start_page", startPage);
-    form.append("end_page", endPage);
+    form.append("start_page", String(startPage ?? 1));
+    form.append("end_page", String(endPage ?? 1));
     const querySummary = await axios.post(
       "http://localhost:8000/search/",
       form,
+      { headers: form.getHeaders() },
     );
     console.log(querySummary.data);
     res.status(200).json({
@@ -65,9 +73,15 @@ exports.queryBasedSummary = async (req, res) => {
       summary: querySummary.data,
     });
   } catch (error) {
+    console.error("Query summary error:", {
+      message: error.message,
+      apiResponse: error.response?.data,
+      requestBody: req.body,
+    });
     return res.status(500).json({
       status: "error",
-      error: `Internal Server Error`,
+      error: "Internal Server Error",
+      details: error.response?.data || error.message,
     });
   }
 };

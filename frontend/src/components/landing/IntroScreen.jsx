@@ -27,7 +27,7 @@ export default function IntroScreen() {
         <p className="text-cyan-400 font-medium mb-2 mt-4">
           A Hub for Students, Teachers & Researchers
         </p>
-        <Title>PocketDoc</Title>
+        <Title>DocuMentor</Title>
         <p className="max-w-xl mx-auto text-gray-400 mb-8">
           Transform how you interact with documents. Extract key insights,
           generate personalized quizzes, and enhance your learning with

@@ -1,14 +1,14 @@
 ###
 # ****************************************************************** TEST RUNNING ***************************************************************************
-# Get("/pocketdoc/user-auth")
+# Get("/documentor/user-auth")
 
-GET http://localhost:3000/pocketdoc/user-auth/
+GET http://localhost:3000/documentor/user-auth/
 
 
 ###
 #******************************************************* SIGN UP *******************************************
-# Post("/pocketdoc/user-auth/signup")
-POST http://localhost:3000/pocketdoc/user-auth/signup
+# Post("/documentor/user-auth/signup")
+POST http://localhost:3000/documentor/user-auth/signup
 accept: application/json
 content-type: application/json
 
@@ -21,9 +21,9 @@ content-type: application/json
 ###
 #******************************************************* SIGN IN *******************************************
 # "_id": "676b8a4fe61f6f99a2050c82",
-# Post("/pocketdoc/user-auth/signin")
+# Post("/documentor/user-auth/signin")
 
-POST http://localhost:3000/pocketdoc/user-auth/signin
+POST http://localhost:3000/documentor/user-auth/signin
 accept: application/json
 content-type: application/json
 
@@ -33,9 +33,9 @@ content-type: application/json
 }
 
 ###
-# POST("/pocketdoc/document/upload")
+# POST("/documentor/document/upload")
 # @file-to-variable pdfUpload ./pdf_to_use.pdf binary
-POST http://localhost:3000/pocketdoc/document/upload
+POST http://localhost:3000/documentor/document/upload
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryxyz123
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NmI4YTRmZTYxZjZmOTlhMjA1MGM4MiIsImlhdCI6MTczNTQ2ODgxMX0.ZnxBhTysHTOJ6bOiAaKQ55Ml8DB-q6B4Eo5CxudT4bM
 
@@ -53,23 +53,23 @@ My Document Title
 
 
 ###
-## GET("/pocketdoc/document/")
-GET http://localhost:3000/pocketdoc/document/
+## GET("/documentor/document/")
+GET http://localhost:3000/documentor/document/
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NmI4YTRmZTYxZjZmOTlhMjA1MGM4MiIsImlhdCI6MTczNTYzNTA5Mn0.ELy1bSeV_lJlLyJgZM5YEs2NHiyb7wqDM_mo3PNykMo
 
 ###
-# GET("pocketdoc/document/:documentId")
+# GET("documentor/document/:documentId")
 #6773b0ea2ae94ae24d707f74#
-GET http://localhost:3000/pocketdoc/document/6773b0ea2ae94ae24d707f74/
+GET http://localhost:3000/documentor/document/6773b0ea2ae94ae24d707f74/
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NmI4YTRmZTYxZjZmOTlhMjA1MGM4MiIsImlhdCI6MTczNTYzNTA5Mn0.ELy1bSeV_lJlLyJgZM5YEs2NHiyb7wqDM_mo3PNykMo
  
 ###
-# GET("pocketdoc/document/:documentId/toc")
-GET http://localhost:3000/pocketdoc/document/67712e93ac6d3b5aa6bc164a/toc
+# GET("documentor/document/:documentId/toc")
+GET http://localhost:3000/documentor/document/67712e93ac6d3b5aa6bc164a/toc
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NmI4YTRmZTYxZjZmOTlhMjA1MGM4MiIsImlhdCI6MTczNTYzNTA5Mn0.ELy1bSeV_lJlLyJgZM5YEs2NHiyb7wqDM_mo3PNykMo
@@ -77,7 +77,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NmI4YTRmZ
 ###
 # summaryRouter.post('/', generateSummaryFromText)
 
-POST http://localhost:3000/pocketdoc/summarize/
+POST http://localhost:3000/documentor/summarize/
 Accept: application/json
 Content-Type: application/json
 
@@ -89,7 +89,7 @@ Content-Type: application/json
 ###
 # summaryRouter.post('/:id/summarize', auth, summarizeChapters)
 
-GET http://localhost:3000/pocketdoc/summarize/67914e96c2255ec2f9e3f236/
+GET http://localhost:3000/documentor/summarize/67914e96c2255ec2f9e3f236/
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NmI4YTRmZTYxZjZmOTlhMjA1MGM4MiIsImlhdCI6MTczNTYzNTA5Mn0.ELy1bSeV_lJlLyJgZM5YEs2NHiyb7wqDM_mo3PNykMo

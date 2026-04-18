@@ -12,7 +12,7 @@ export default function Pricing() {
       <main className="flex-grow container mx-auto px-4 py-24 text-center">
         <h1 className="text-4xl font-bold mb-4">Pricing</h1>
         <p className="text-gray-400 text-lg mb-12">
-          PocketDoc is completely free — no hidden fees, no credit card
+          DocuMentor is completely free — no hidden fees, no credit card
           required.
         </p>
 

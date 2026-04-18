@@ -26,7 +26,7 @@ app.use(
 app.use(cookieParser());
 
 app.use(express.json());
-app.use("/pocketdoc", router);
+app.use("/documentor", router);
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static("uploads"));
 

@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
               1. Overview
             </h2>
             <p>
-              At PocketDoc, your privacy is important to us. This policy
+              At DocuMentor, your privacy is important to us. This policy
               outlines how we collect, use, and protect your data when you use
               our services.
             </p>
@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
               6. Third-Party Services
             </h2>
             <p>
-              PocketDoc may use third-party services (like analytics or file
+              DocuMentor may use third-party services (like analytics or file
               storage) but only with providers that adhere to strong privacy and
               security practices.
             </p>
@@ -95,10 +95,10 @@ export default function PrivacyPolicy() {
             <p>
               Have questions? Reach out to us at{" "}
               <a
-                href="mailto:support@pocketdoc.ai"
+                href="mailto:support@documentor.ai"
                 className="text-cyan-400 underline"
               >
-                support@pocketdoc.ai
+                support@documentor.ai
               </a>
               .
             </p>

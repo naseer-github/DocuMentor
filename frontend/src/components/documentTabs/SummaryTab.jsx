@@ -20,6 +20,7 @@ export default function SummaryTab({ selectedText }) {
   const [focus, setFocus] = useState("main ideas");
 
   const handleSummaryGeneration = async () => {
+    if (!selectedText?.trim()) return;
     const summary = await generatePassageSummary({
       passage: selectedText,
       summaryLength,
@@ -27,6 +28,7 @@ export default function SummaryTab({ selectedText }) {
       focus,
       documentType,
     });
+    if (!summary) return;
 
     console.log(summary);
     const cleanedMarkdown = summary

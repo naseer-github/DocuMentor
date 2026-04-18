@@ -43,7 +43,7 @@ export default function AboutUsPage() {
       <div className="container mx-auto py-16 px-4 mt-10">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-white mb-4">
-            About PocketDoc
+            About DocuMentor
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto">
             Empowering learners and educators with smart document
@@ -57,9 +57,9 @@ export default function AboutUsPage() {
               Our Platform
             </h2>
             <p className="text-gray-300 mb-4">
-              PocketDoc transforms your documents into digestible summaries and
+              DocuMentor transforms your documents into digestible summaries and
               intelligent quizzes using cutting-edge AI. Whether you’re a
-              student, teacher, or lifelong learner, PocketDoc helps you grasp
+              student, teacher, or lifelong learner, DocuMentor helps you grasp
               key ideas and test understanding—all from a single file.
             </p>
             <p className="text-gray-300 mb-4">
@@ -69,7 +69,7 @@ export default function AboutUsPage() {
               compromising intelligence.
             </p>
             <p className="text-gray-300">
-              Built for accessibility and performance, PocketDoc is lightweight
+              Built for accessibility and performance, DocuMentor is lightweight
               and optimized for everyday devices. You get meaningful insights,
               effective assessments, and a personalized learning journey.
             </p>
@@ -104,7 +104,7 @@ export default function AboutUsPage() {
         {/* Key Features */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold text-white border-b border-gray-700 pb-2 mb-6">
-            Why PocketDoc?
+            Why DocuMentor?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard
@@ -147,12 +147,12 @@ export default function AboutUsPage() {
                 Simplify Learning. Amplify Understanding.
               </h2>
               <p className="text-gray-300 mb-6">
-                PocketDoc gives you control over your learning. No distractions,
+                DocuMentor gives you control over your learning. No distractions,
                 no complexity—just your content and our AI working together.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-500 hover:from-cyan-500 hover:to-cyan-400">
-                  Try PocketDoc Free
+                  Try DocuMentor Free
                 </Button>
                 <Button className="px-6 py-3 bg-gray-700 hover:bg-gray-600">
                   See Demo

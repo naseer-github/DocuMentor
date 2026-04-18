@@ -51,9 +51,12 @@ END""")
     elif question_type == "mixed":
         type_instruction = "Include a mix of both factual and conceptual questions."
 
+    # Pre-build the bullet list to avoid backslashes inside an f-string expression.
+    formatted_instructions = "\n- ".join(format_instructions)
+
     return f"""
 Based on the following text, generate only relevant questions of the following types:
-- {'\n- '.join(format_instructions)}
+- {formatted_instructions}
 
 If the text does not contain enough information for a relevant question type, do not generate that question.
 If no questions are relevant at all, respond with: NO QUESTIONS

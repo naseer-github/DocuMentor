@@ -1,7 +1,7 @@
 import { getNavigate } from "@/utils/navigateFunction";
 import axios from "axios";
 
-export const BASE_URL = "http://localhost:3000/pocketdoc/";
+export const BASE_URL = "http://localhost:3000/documentor/";
 
 const apiClient = axios.create({
   baseURL: BASE_URL,

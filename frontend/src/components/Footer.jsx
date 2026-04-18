@@ -50,7 +50,7 @@ export default function Footer() {
                 Stay in the loop
               </h3>
               <p className="text-gray-300">
-                Get the latest updates and news from PocketDoc
+                Get the latest updates and news from DocuMentor
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -78,11 +78,11 @@ export default function Footer() {
             <Link to="/" className="flex items-center">
               <img
                 src="/logo.png"
-                alt="PocketDoc Logo"
+                alt="DocuMentor Logo"
                 className="h-8 mr-3 mb-5"
               />
               <span className="self-center text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-400 mb-5">
-                PocketDoc
+                DocuMentor
               </span>
             </Link>
 
@@ -126,7 +126,7 @@ export default function Footer() {
           <span className="text-sm text-gray-400">
             © {currentYear}{" "}
             <Link to="/" className="hover:text-cyan-400 transition-colors">
-              PocketDoc
+              DocuMentor
             </Link>
             . All Rights Reserved.
           </span>

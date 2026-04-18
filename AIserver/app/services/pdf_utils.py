@@ -1,6 +1,5 @@
 import os
 import markdown
-from weasyprint import HTML
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
@@ -18,6 +17,9 @@ def chunk_document(text: str, chunk_size: int = 7500) -> list:
 
 
 def convert_summary_to_pdf(summary_markdown: str, output_path: str):
+    # Import here so the API can start on systems missing WeasyPrint native libs.
+    from weasyprint import HTML
+
     html = markdown.markdown(summary_markdown)
     styled_html = f"""
         <!DOCTYPE html>

@@ -91,7 +91,7 @@ export default function Services() {
         {/* Features Section */}
 
         <h2 className="text-3xl font-semibold text-center mb-12">
-          What You Can Do with PocketDoc
+          What You Can Do with DocuMentor
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
