@@ -1,12 +1,12 @@
-import os
 import markdown
 from langchain_community.document_loaders import PyPDFLoader
+
+from app.core.paths import resolve_server_file
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
 def extract_text_from_pdf(file_path: str, start_page: int, end_page: int) -> str:
-    file_path = os.path.join('../server', file_path)
-    loader = PyPDFLoader(file_path)
+    loader = PyPDFLoader(resolve_server_file(file_path))
     pages = loader.load()[start_page - 1:end_page]
     return "\n\n".join([page.page_content for page in pages])
 

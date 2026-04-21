@@ -24,6 +24,6 @@ async def summarize_document(
         format_preference=format_preference,
         focus=focus
     )
-    convert_summary_to_pdf(
-        summary, f"./summaries/test_{start_page}_{end_page}_summary.pdf")
-    return {"summary": summary}
+    # convert_summary_to_pdf(
+    #     summary, f"./summaries/test_{start_page}_{end_page}_summary.pdf")
+    # return {"summary": summary}

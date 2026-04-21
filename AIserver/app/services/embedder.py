@@ -1,5 +1,5 @@
-import os
 from app.core.model import embedding_model, chroma_client
+from app.core.paths import resolve_server_file
 from langchain_community.document_loaders import PyPDFLoader
 
 
@@ -13,8 +13,7 @@ def chunk_text(text, page_num, chunk_size=300):
 
 
 def embed_pdf(file_path: str, doc_id: str):
-    file_path = os.path.join("../server", file_path)
-    loader = PyPDFLoader(file_path)
+    loader = PyPDFLoader(resolve_server_file(file_path))
     pages = loader.load()
 
     all_chunks, page_nums = [], []
