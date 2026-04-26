@@ -26,6 +26,11 @@ const userSchema = new mongoose.Schema({
       message: "Enter password atleast 6 letters long",
     },
   },
+  role: {
+    type: String,
+    enum: ["user", "admin"],
+    default: "user",
+  },
   createdAt: {
     type: Date,
     default: Date.now,

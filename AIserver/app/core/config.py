@@ -9,10 +9,15 @@ load_dotenv(AI_SERVER_ROOT / ".env")
 load_dotenv(REPO_ROOT / ".env", override=False)
 
 GEMINI_API_KEY = (
-    os.getenv("GEMINI_API")
-    or os.getenv("GEMINI_API_KEY")
+    os.getenv("GEMINI_API_KEY")
     or os.getenv("GOOGLE_API_KEY")
 )
+
+if not GEMINI_API_KEY:
+    raise RuntimeError(
+        "AI server: missing Google Gemini API key. Create a file AIserver/.env with:\n"
+        "GEMINI_API_KEY=your_key"
+    )
 
 
 def add_cors(app):

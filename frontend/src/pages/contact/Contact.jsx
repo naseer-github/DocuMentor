@@ -117,21 +117,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Map Section */}
-        <div className="mb-20">
-          <h2 className="text-2xl font-semibold mb-4">Our Location</h2>
-          <a
-            href="https://share.google/9qwucFmAM2qPPYHDW"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/map_location.png"
-              alt="Our location on the map"
-              className="w-full h-92 object-cover rounded-lg hover:opacity-90 transition-opacity"
-            />
-          </a>
-        </div>
+        
 
         {/* FAQ Section */}
         <div className="mb-20">

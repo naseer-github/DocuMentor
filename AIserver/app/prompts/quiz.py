@@ -1,3 +1,4 @@
+
 # prompts/quiz.py
 def get_quiz_prompt_from_chunk(text: str, answer_formats: list[str], question_type: str = "mixed") -> str:
     format_instructions = []
@@ -71,36 +72,30 @@ Format examples:
 """
 
 
-def mark_quiz_prompt(q_type: str, question: str, answer: str, user_answer: str) -> str:
-    max_score = 2 if q_type.lower() == "short" else 5
-
-    grading_rule_line = ""
-    if q_type.lower() == "short":
-        grading_rule_line = "- This is a short question. Mark it out of 2."
-    elif q_type.lower() == "long":
-        grading_rule_line = "- This is a long question. Mark it out of 5."
+def get_mark_quiz_prompt(questions: list, answers: list) -> str:
+    """
+    Generate a prompt to mark multiple quiz answers at once.
+    """
+    quiz_items = []
+    for i, (q, a) in enumerate(zip(questions, answers)):
+        quiz_items.append(f"""
+Question {i+1}:
+Type: {q.get('type', 'unknown')}
+Question: {q['question']}
+Correct Answer: {q['correct_answer']}
+User Answer: {a}
+""")
 
     return f"""
-You are an automated grading assistant.
+You are an automated quiz grading assistant. Grade the following quiz answers.
 
-Grade the following student's answer based on the correct answer and the question type.
+For each question:
+- Provide a score (0-5 for long questions, 0-2 for short questions)
+- Give brief feedback explaining the score
+- Format: "Question X: Score Y/5 - Feedback: [explanation]"
 
-Question: {question}
+Quiz to grade:
+{''.join(quiz_items)}
 
-Correct Answer: {answer}
-
-User Answer: {user_answer}
-
-Question Type: {q_type.capitalize()}
-
-Grading Rules:
-{grading_rule_line}
-- Award full marks for complete and accurate answers.
-- Award partial marks for partially correct or incomplete answers.
-- Award zero if the answer is incorrect, off-topic, or too vague.
-- Show a little leniency in checking
-
-Respond in the format:
-Score: X/{max_score}
-Justification: <why the user got this score>
+Output only the scores and feedback, one per line.
 """

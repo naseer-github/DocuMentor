@@ -15,6 +15,6 @@ services:
       - aiservice
 
   aiservice:
-    build: ./aiservice
+    build: ./AIserver
     ports:
       - "8000:8000"
